@@ -10,13 +10,13 @@ const colorSets = [
   "rgb(75, 105, 246)",
 ];
 
-const Marker = ({ text, tooltip, colorId , onClick}) => {
+const Marker = ({ text, tooltip, colorId , onClick, zIndex}) => {
   const handleClick = () => {
     console.log(`You clicked on ${tooltip}`);
   };
   return (
     <FaMapMarkerAlt
-      style={{ width: 36, height: 36, color: colorSets[colorId] , cursor:"pointer"}}
+      style={{ width: 36, height: 36, color: colorSets[colorId] , cursor:"pointer", zIndex : zIndex}}
       tooltip={tooltip}
       onClick={onClick}
     />

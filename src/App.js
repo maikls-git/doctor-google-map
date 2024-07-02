@@ -167,7 +167,6 @@ function App() {
                 </div>
               </div>
             )}
-            <Marker lat={mapCenter.lat} lng={mapCenter.lng} />
             {doctorDatas.map((item, index) => (
               <Marker
                 key={index}
@@ -181,6 +180,11 @@ function App() {
                 }
               />
             ))}
+            <Marker
+              lat={mapCenter.lat}
+              lng={mapCenter.lng}
+              zIndex={9999}
+            />
           </GoogleMap>
         </div>
       </main>
